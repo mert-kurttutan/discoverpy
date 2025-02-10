@@ -11,7 +11,7 @@ const currentSource = ref(PythonIndex[0])
 
 <template>
     <div class="index-source">
-        <h2>Index Source</h2>
+        <p>Index Source: </p>
         <select v-model="currentSource">
             <option v-for="source in PythonIndex" :key="source">{{ source }}</option>
         </select>
@@ -23,9 +23,17 @@ const currentSource = ref(PythonIndex[0])
 
 .index-source {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin-right: 0;
-    margin-left: auto;
+    margin-top: 20px;
+    margin-left: 10px;
+
+}
+
+p {
+    /* margin: 0 10px; */
+    /* margin-top: 20px; */
+    margin-right: 10px;
+    padding: 0;
 }
 </style>

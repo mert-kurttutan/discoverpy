@@ -1,3 +1,6 @@
+<script lang="ts" setup>
+</script>
+
 <template>
     <div class="container">
       <div class="left">
@@ -9,32 +12,34 @@
     </div>
   </template>
   
-  <script>
-  export default {
-    name: 'LayoutComponent'
-  };
-  </script>
-  
   <style scoped>
   .container {
     display: flex;
-    width: 100vw;
+    /* width: 100vw; */
     /* height: 100vh; */
     align-items: center; /* Centers the left box vertically */
   }
   .left {
-    width: 70%;
+    width: 90%;
     /* background-color: lightblue; */
-    display: flex;
+    /* display: flex; */
+    flex:2;
     justify-content: center;
     align-items: center;
     height: 100px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
   }
   .right {
-    width: 30%;
+    width: 10%;
+    /* display: flex; */
+    flex:1;
+    flex-direction: column;
     /* background-color: lightcoral; */
+    justify-content: center;
+    align-items: center;
     height: 100px;
-    margin-left: auto; /* Pushes right div to the far right */
   }
   </style>
   

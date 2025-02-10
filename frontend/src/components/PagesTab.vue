@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-
-import { ref } from 'vue'
-
 const Pages = [
     "Search",
     "Categories",
@@ -30,6 +27,9 @@ const currentPage = defineModel<string>()
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    /* background-color:forestgreen; */
+    border-width: 40px;
+    border-color: white;
 }
 
 .pages-tab ul {
@@ -44,6 +44,8 @@ const currentPage = defineModel<string>()
 }
 
 .pages-tab li.active {
-    color: blue;
+    /* color: blue; */
+    font-weight: bold;
+    text-decoration: underline;
 }
 </style>

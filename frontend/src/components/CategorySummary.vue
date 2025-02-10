@@ -17,7 +17,7 @@ window.addEventListener('resize', () => {
 })
 
 watchEffect(() => {
-    console.log("screen width: ", screenWidth.value);
+    // console.log("screen width: ", screenWidth.value);
     if (screenWidth.value >= 1200) {
         columns.value = 4
     } else if (screenWidth.value >= 750) {
@@ -37,8 +37,6 @@ const rows = computed(() => Math.ceil(24 / columns.value))
 <template>
     <div class="category-list">
         <h2>Categories</h2>
-        <p> Number of rows: {{ rows }}</p>
-        <p> Number of columns: {{ columns }}</p>
         <div class="row" v-for="i in rows" :key="i">
             <div class="column" v-for="j in columns" :key="j">
                 <div class="card">
