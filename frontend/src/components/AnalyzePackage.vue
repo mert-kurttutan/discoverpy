@@ -1,12 +1,13 @@
 <script lang="ts" setup>
-import { Bar } from 'vue-chartjs'
-import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
-const chartData = {
-    labels: [ 'January', 'February', 'March' ],
-    datasets: [ { data: [40, 20, 12] } ]
-}
+import { Bar, Scatter } from 'vue-chartjs'
+import { Chart as ChartJS,   LinearScale,
+  PointElement,
+  LineElement,
+  Tooltip,
+  Legend } from 'chart.js'
+  import * as chartConfig from '../store/scatterDataset'
 
+ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend)
 const chartOptions = {
   responsive: true,
 //   maintainAspectRatio: false
@@ -19,9 +20,9 @@ const chartOptions = {
     <p>Package to Anaylze: {{ $route.query.q }}</p>
   </div>
 
-  <Bar
+  <Scatter
     id="my-chart-id"
-    :options="chartOptions"
-    :data="chartData"
+    :options="chartConfig.options"
+    :data="chartConfig.data"
   />
 </template>

@@ -24,8 +24,6 @@ const search = ref('')
       placeholder="Search for a python package..."
       @keyup.enter="routerPushQuery('search', {q: search})"
     />
-    <!-- <button @click="routerPush('search')">Search</button> -->
-    # search with query equal to search
     <button @click="routerPushQuery('search', {q: search})">Search</button>
     </div>
 </template>
@@ -40,12 +38,16 @@ display: flex;
   margin-left: 0px;
     margin-right: 0px;
     padding-left: 0px;
+    border-radius: 40px;
+
 }
 
 .search-bar input {
   width: 100%;
   padding: 10px;
   font-size: 1em;
+  border-radius: 150px;
+
 }
 
 .search-bar input:focus {
